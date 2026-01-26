@@ -5,13 +5,16 @@
  */
 public class WeeklyData {
 
+
     // -------------------------------------------------------------
     // Instance Variables
     // -------------------------------------------------------------
     // TODO: Declare a private array to store the week’s data
     //       Choose an appropriate type (double[] or int[])
     //       Create other instance variables as necessary
-    
+    private int[] sleepHours;
+
+
 
 
     // -------------------------------------------------------------
@@ -28,7 +31,13 @@ public class WeeklyData {
         // TODO: Create a new array with the same length as input
         // TODO: Copy each value from input into the internal data array
         // NOTE: Do NOT do this.data = input; (that would create aliasing)
+        this.sleepHours = new int[sleepHours.length];
+        for (int i = 0; i < sleepHours.length; i++) {
+            this.sleepHours[i] = sleepHours[i];
+        }
     }
+
+
 
 
     // -------------------------------------------------------------
@@ -43,8 +52,14 @@ public class WeeklyData {
         // TODO: Create a variable to store the running total
         // TODO: Use a loop to add each value in the array to the total
         // TODO: Return the total
-        return 0.0; // replace with your calculated total
+        int total = 0;
+        for (int hours : sleepHours) {
+            total += hours;
+        }
+        return total;// replace with your calculated total
     }
+
+
 
 
     // -------------------------------------------------------------
@@ -60,8 +75,10 @@ public class WeeklyData {
         // TODO: If the array length is 0, return 0.0
         // TODO: Otherwise, divide the total by the number of elements
         // Hint: You may call getTotal()
-        return 0.0; // replace with your calculated average
+        return getTotal() / 7.0; // replace with your calculated average
     }
+
+
 
 
     // -------------------------------------------------------------
@@ -76,8 +93,16 @@ public class WeeklyData {
         // TODO: Assume the first value is the current maximum
         // TODO: Loop through the rest of the array and update max as needed
         // TODO: Return the maximum value found
-        return 0.0; // replace with the maximum value
+        int max = sleepHours[0];
+        for (int hours : sleepHours) {
+            if (hours > max) {
+                max = hours;
+            }
+        }
+        return max;// replace with the maximum value
     }
+
+
 
 
     // -------------------------------------------------------------
@@ -92,8 +117,16 @@ public class WeeklyData {
         // TODO: Assume the first value is the current minimum
         // TODO: Loop through the rest of the array and update min as needed
         // TODO: Return the minimum value found
-        return 0.0; // replace with the minimum value
+        int min = sleepHours[0];
+        for (int hours : sleepHours) {
+            if (hours < min) {
+                min = hours;
+            }
+        }
+        return min; // replace with the minimum value
     }
+
+
 
 
     // -------------------------------------------------------------
@@ -115,6 +148,13 @@ public class WeeklyData {
         // TODO: Loop through the data array
         // TODO: Append each value with a day label (Day 1, Day 2, etc.)
         // TODO: Return the completed String
-        return ""; // replace with your formatted output
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < sleepHours.length; i++) {
+            sb.append("Day ").append(i + 1).append(": ").append(sleepHours[i]).append("\n");
+        }
+        return sb.toString();; // replace with your formatted output
     }
 }
+
+
+
