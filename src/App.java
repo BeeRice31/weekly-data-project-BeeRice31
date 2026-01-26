@@ -96,9 +96,9 @@ public class App {
         // -------------------------------------------------------------
         double averageSleep = data.getAverage();
         if (averageSleep < 6) {
-            System.out.println("⚠️  You need more sleep next week! Try to aim for 7-9 hours per night.");
+            System.out.println("You need more sleep next week! Try to aim for 7-9 hours per night.");
         } else if (averageSleep >= 7 && averageSleep <= 9) {
-            System.out.println("✓ Great job! You're getting a healthy amount of sleep this week.");
+            System.out.println("Great job! You're getting a healthy amount of sleep this week.");
         } else {
             System.out.println("You're getting plenty of sleep! Keep maintaining this healthy routine.");
         }
