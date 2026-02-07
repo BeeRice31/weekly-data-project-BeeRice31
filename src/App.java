@@ -75,7 +75,7 @@ public class App {
         // -------------------------------------------------------------
         System.out.println("\n--- Weekly Sleep Analysis ---");
         System.out.println("Total Sleep Hours: " + data.getTotal());
-        System.out.println("Average Sleep Hours: " + String.format("%.2f", data.getAverage()));
+        System.out.println("Average Sleep Hours: " + data.getAverage());
         System.out.println("Minimum Sleep Hours: " + data.getMin());
         System.out.println("Maximum Sleep Hours: " + data.getMax());
 
@@ -97,6 +97,12 @@ public class App {
         double averageSleep = data.getAverage();
         if (averageSleep < 6) {
             System.out.println("You need more sleep next week! Try to aim for 7-9 hours per night.");
+            System.out.println("Consider not using screens before bed");
+            System.out.println("Try to go to bed and wake up at the same time each day");
+            System.out.println("Try not to consume caffeine in the afternoon and evening");
+            System.out.println("Try not to eat or drink a lot before bed");
+            System.out.println("Try to get some exercise during the day");
+            System.out.println("Stick to a routine with these to help your body get used to a regular sleep schedule");
         } else if (averageSleep >= 7 && averageSleep <= 9) {
             System.out.println("Great job! You're getting a healthy amount of sleep this week.");
         } else {

@@ -2,18 +2,9 @@
  * The WeeklyData class stores and analyzes a week’s worth of numeric data.
  * This could represent steps taken, hours of sleep, money spent, screen time,
  * or any other measurable daily value.
+ * Copilot was used to help debug
  */
-public class WeeklyData {
-
-
-    // -------------------------------------------------------------
-    // Instance Variables
-    // -------------------------------------------------------------
-    // TODO: Declare a private array to store the week’s data
-    //       Choose an appropriate type (double[] or int[])
-    //       Create other instance variables as necessary
-    private int[] sleepHours;
-
+/* Duplicate file removed. See WeeklyData.java for the correct implementation. */
 
 
 
